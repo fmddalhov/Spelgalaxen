@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory</title>
+
+    <link rel="stylesheet" href="css/memory.css" type="text/css" media="all" />
+    <script src="js/memory.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chewy&family=Lilita+One&family=Righteous&family=Russo+One&family=Tourney&family=Yanone+Kaffeesatz&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>MEMORY</h1>
+        <a href="index.html"><div class="back-to-menu"><span class="back-text">Tillbaka till SPELGALAXEN</span></div></a>
+    </header>
+    <aside class="memory-box-container">
+        <div class="theme-box" onclick="changeGame('Vilda djur')"><span class="theme-text"><span
+                    class="box-emoji">🦁</div>
+        <div class="theme-box" onclick="changeGame('Djur på bondgården')"><span class="theme-text"><span
+                    class="box-emoji">🐮</div>
+        <div class="theme-box" onclick="changeGame('Fåglar')"><span class="theme-text"><span
+                    class="box-emoji">🦜</div>
+        <div class="theme-box" onclick="changeGame('Djur i havet')"><span class="theme-text"><span
+                    class="box-emoji">🦈</div>
+        <div class="theme-box" onclick="changeGame('Kroppen')"><span class="theme-text"><span
+                    class="box-emoji">👍🏻</div>
+        <div class="theme-box" onclick="changeGame('Rymden')"><span class="theme-text"><span
+                    class="box-emoji">🚀</div>
+    </aside>
+
+    <main>
+        <div class="memory-grid-container"></div>
+        <div class="memory-events"><p>Antal försök: <span class="score"></span></p>
+        <div class="actions"><button onclick="restart()">Börja om</button></div></div>
+    </main>
+    <footer>Copyright &#xA9; Matilda Dalhov</footer>
+</body>
+
+</html>
+
+<!--<a href="https://www.freepik.com/free-vector/kid-astronaut-spaceman-cute-cartoon-character_50065789.htm#&position=5&from_view=user&uuid=fcb928ac-641b-4f1b-af32-b0750f400957">Image by upklyak</a> on Freepik-->

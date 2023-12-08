@@ -1,0 +1,224 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    margin: 0;
+    background: linear-gradient(325deg, #03001e 0%, #7303c0 30%, #b938ec 70%, #fdeff9 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/sky.jpg);
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+header {
+    grid-area: header;
+    color:#fdeff9;
+}
+
+h1 {
+    font-family: 'Tourney';
+    font-size: 80px;
+    text-align: center;
+}
+
+.big-text {
+    font-size: 100px;
+}
+
+.header-img {
+    height: 200px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 230px;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    padding-top: 40px;
+    font-family: 'Russo One';
+    font-size: 40px;
+}
+
+.box-text {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.box-text:hover {
+    transform: rotateY(180deg);
+    color: #ffdb10;
+}
+
+.box-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    border-radius: inherit;
+    z-index: -1;
+    transform: rotateY(180deg);
+    transition: inherit;
+}
+
+.img-box {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: #03001e 0px 5px 15px;
+    position: relative;
+}
+
+.img-box::before {
+    content: '';
+    border-radius: 50%;
+    background: #ff8f10;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+    position: absolute;
+}
+
+.img-box:hover::before {
+    transform: scale(1.1) rotateY(180deg);
+    box-shadow: 0 0 30px #ff8f10;
+}
+
+.img-box:hover {
+    transform: scale(1.2) rotateY(180deg);
+    box-shadow: 0 0 30px #ff8f10;
+    transition: transform 0.5s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: #03001e;
+}
+
+.memory-box {
+    background: url(../img/dark-planet.jpg);
+    background-size: cover;
+}
+
+.memory-box:hover {
+    background: linear-gradient(rgba(3, 0, 30, 0.5), rgba(3, 0, 30, 0.5)),url(../img/dark-planet.jpg);
+    background-size: cover;
+}
+
+.color-box {
+    background: url(../img/orange-planet.jpg);
+    background-size: cover;
+}
+
+.color-box:hover {
+    background: linear-gradient(rgba(3, 0, 30, 0.5), rgba(3, 0, 30, 0.5)),url(../img/orange-planet.jpg);
+    background-size: cover;
+}
+
+.math-box {
+    background: url(../img/blue-planet.jpg);
+    background-size: cover;
+}
+
+.math-box:hover {
+    background: linear-gradient(rgba(3, 0, 30, 0.5), rgba(3, 0, 30, 0.5)), url(../img/blue-planet.jpg);
+    background-size: cover;
+}
+
+.snake-box {
+    background: url(../img/green-planet.jpg);
+    background-size: cover;
+}
+
+.snake-box:hover {
+    background: linear-gradient(rgba(3, 0, 30, 0.5), rgba(3, 0, 30, 0.5)), url(../img/green-planet.jpg);
+    background-size: cover;
+}
+
+.tic-box {
+    background: url(../img/red-planet.jpg);
+    background-size: cover;
+}
+
+.tic-box:hover {
+    background: linear-gradient(rgba(3, 0, 30, 0.5), rgba(3, 0, 30, 0.5)), url(../img/red-planet.jpg);
+        background-size: cover;
+}
+
+.jump-box {
+    background: url(../img/purple-planet.jpg);
+    background-size: cover;
+}
+
+.jump-box:hover {
+    background: linear-gradient(rgba(3, 0, 30, 0.5), rgba(3, 0, 30, 0.5)), url(../img/purple-planet.jpg);
+    background-size: cover;
+}
+
+main {
+    grid-area: main;
+    background: url(../img/astronaut-planet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    box-shadow: 25px 50px 50px 0px #672c8a inset, -25px -25px 50px 0 #460361 inset;
+}
+
+.shadow {
+    display: block;
+    position: relative;
+}
+
+.front-img {
+    max-width: 100%;
+}
+
+.shadow:before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 25px 50px 50px 0px #5b0570 inset, -25px -25px 50px 0 #460361 inset; 
+}
+
+footer {
+    grid-area: footer;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Russo One';
+    color: #fdeff9;
+}
